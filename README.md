@@ -1,9 +1,9 @@
-# ![logo](https://aconia.co/_static/toto/img/AconiaLogo/512/aconiaLogo2_wide_txtwhite_512w.png)
+# ![logo](https://raw.githubusercontent.com/aconia-co/messenger-bot-webview-toolkit/master/img-res/aconiaLogo2_wide_txtblack_512w.png)
 > Messenger Bot Webview toolkit - Build attractive and intuitive webviews
 
 [![github version](https://img.shields.io/github/release/aconia-co/messenger-bot-webview-toolkit.svg)](https://github.com/aconia-co/messenger-bot-webview-toolkit/releases/latest) [![license](https://img.shields.io/github/license/aconia-co/messenger-bot-webview-toolkit.svg)](https://github.com/aconia-co/messenger-bot-webview-toolkit/blob/master/LICENSE) [![code with hearth by Aconia](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-Aconia-4665DF.svg)](https://github.com/aconia-co)
 
-<p align="center"><a href="https://aconia-co.github.io/messenger-bot-webview-toolkit/"><img src="https://user-images.githubusercontent.com/1215767/34356204-4c03be8a-ea7f-11e7-9aa9-0d84f9e912ec.gif" /></a></p>
+<p align="center"><a href="https://aconia-co.github.io/messenger-bot-webview-toolkit/"><img src="https://raw.githubusercontent.com/aconia-co/messenger-bot-webview-toolkit/master/img-res/FB_wv_page%20cover.png" /></a></p>
 
 ## 🚩 Table of Contents
 - [Browser Support](#-browser-support)
@@ -28,7 +28,7 @@
 Launching an attractive and **UX-friendly** bot quickly and affordably is important for modern businesses — Aconia offers massive value without looking 'bargain-bin'.
 
 ### UX-friendly Interchangeable Blocks
-![image](https://user-images.githubusercontent.com/1215767/34354737-b98a0736-ea73-11e7-8375-d4c83b8894d8.png)
+![image](https://raw.githubusercontent.com/aconia-co/messenger-bot-webview-toolkit/master/img-res/FB_wv_page%20cover.png)
 * **Over 20 Fully-Built Customisable Webview Templates**: Jump start your project with Aconia's diverse array of beautiful pre-built templates
 * **Over 300 Interchangeable Webview Components**: Build your own webviews from scratch in no time with easily customisable interface components
 
