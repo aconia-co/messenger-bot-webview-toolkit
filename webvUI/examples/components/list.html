@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page list js_show">
+            <div class="page__hd">
+                <h1 class="page__title">List</h1>
+                <p class="page__desc">Different kinds of lists with features</p>
+            </div>
+            <div class="page__bd">
+                <div class="webvUI-cells__title">List with item description</div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__bd">
+                            <p>Item Title</p>
+                        </div>
+                        <div class="webvUI-cell__ft">instructions</div>
+                    </div>
+                    <div class="webvUI-cell webvUI-cell_swiped">
+                        <div class="webvUI-cell__bd" style="transform: translateX(-68px)">
+                            <div class="webvUI-cell">
+                                <div class="webvUI-cell__bd">
+                                    <p>Item Title</p>
+                                </div>
+                                <div class="webvUI-cell__ft">instructions</div>
+                            </div>
+                        </div>
+                        <div class="webvUI-cell__ft">
+                            <a class="webvUI-swiped-btn webvUI-swiped-btn_warn" href="javascript:">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="webvUI-cells__title">List item with icon and description</div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__hd"><img src="../../src/img/partner-4.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                        <div class="webvUI-cell__bd">
+                            <p>Item Title</p>
+                        </div>
+                        <div class="webvUI-cell__ft">instructions</div>
+                    </div>
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__hd"><img src="../../src/img/partner-4.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                        <div class="webvUI-cell__bd">
+                            <p>Item Title</p>
+                        </div>
+                        <div class="webvUI-cell__ft">instructions</div>
+                    </div>
+                </div>
+                <div class="webvUI-cells__title">List item with jump</div>
+                <div class="webvUI-cells">
+                    <a class="webvUI-cell webvUI-cell_access" href="javascript:;">
+                        <div class="webvUI-cell__bd">
+                            <p>cell standard</p>
+                        </div>
+                        <div class="webvUI-cell__ft">
+                        </div>
+                    </a>
+                    <a class="webvUI-cell webvUI-cell_access" href="javascript:;">
+                        <div class="webvUI-cell__bd">
+                            <p>cell standard</p>
+                        </div>
+                        <div class="webvUI-cell__ft">
+                        </div>
+                    </a>
+                </div>
+                <div class="webvUI-cells__title">List item with icon and description</div>
+                <div class="webvUI-cells">
+                    <a class="webvUI-cell webvUI-cell_access" href="javascript:;">
+                        <div class="webvUI-cell__bd">
+                            <p>cell standard</p>
+                        </div>
+                        <div class="webvUI-cell__ft">instructions</div>
+                    </a>
+                    <a class="webvUI-cell webvUI-cell_access" href="javascript:;">
+                        <div class="webvUI-cell__bd">
+                            <p>cell standard</p>
+                        </div>
+                        <div class="webvUI-cell__ft">instructions</div>
+                    </a>
+                </div>
+                <div class="webvUI-cells__title">List item with icon, description, jump</div>
+                <div class="webvUI-cells">
+                    <a class="webvUI-cell webvUI-cell_access" href="javascript:;">
+                        <div class="webvUI-cell__hd"><img src="../../src/img/partner-4.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                        <div class="webvUI-cell__bd">
+                            <p>cell standard</p>
+                        </div>
+                        <div class="webvUI-cell__ft">instructions</div>
+                    </a>
+                    <a class="webvUI-cell webvUI-cell_access" href="javascript:;">
+                        <div class="webvUI-cell__hd"><img src="../../src/img/partner-4.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                        <div class="webvUI-cell__bd">
+                            <p>cell standard</p>
+                        </div>
+                        <div class="webvUI-cell__ft">instructions</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page gallery js_show">
+            <div class="page__hd">
+                <h1 class="page__title">Gallery</h1>
+                <p class="page__desc">Gallery example below</p>
+            </div>
+            <div class="webvUI-gallery" style="display: block">
+                <span class="webvUI-gallery__img" style="background-image: url(../../src/img/conference-2.jpg);"></span>
+                <div class="webvUI-gallery__opr">
+                    <a href="javascript:" class="webvUI-gallery__del">
+                <i class="webvUI-icon-delete webvUI-icon_gallery-delete"></i>
+            </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

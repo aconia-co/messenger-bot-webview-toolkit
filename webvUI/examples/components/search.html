@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page searchbar js_show">
+            <div class="page__hd">
+                <h1 class="page__title">SearchBar</h1>
+                <p class="page__desc">Search bar and dynamic result example below</p>
+            </div>
+            <div class="page__bd">
+                <div class="webvUI-search-bar" id="searchBar">
+                    <form class="webvUI-search-bar__form">
+                        <div class="webvUI-search-bar__box">
+                            <i class="webvUI-icon-search"></i>
+                            <input type="search" class="webvUI-search-bar__input" id="searchInput" placeholder="Search" required="">
+                            <a href="javascript:" class="webvUI-icon-clear" id="searchClear"></a>
+                        </div>
+                        <label class="webvUI-search-bar__label" id="searchText">
+                            <i class="webvUI-icon-search"></i>
+                            <span>Search</span>
+                        </label>
+                    </form>
+                    <a href="javascript:" class="webvUI-search-bar__cancel-btn" id="searchCancel">Cancel</a>
+                </div>
+                <div class="webvUI-cells searchbar-result" id="searchResult">
+                    <div class="webvUI-cell webvUI-cell_access">
+                        <div class="webvUI-cell__bd webvUI-cell_primary">
+                            <p>Real-time search result</p>
+                        </div>
+                    </div>
+                    <div class="webvUI-cell webvUI-cell_access">
+                        <div class="webvUI-cell__bd webvUI-cell_primary">
+                            <p>Real-time search result</p>
+                        </div>
+                    </div>
+                    <div class="webvUI-cell webvUI-cell_access">
+                        <div class="webvUI-cell__bd webvUI-cell_primary">
+                            <p>Real-time search result</p>
+                        </div>
+                    </div>
+                    <div class="webvUI-cell webvUI-cell_access">
+                        <div class="webvUI-cell__bd webvUI-cell_primary">
+                            <p>Real-time search result</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" class="searchbar js_show">
+        $(function() {
+            var $searchBar = $('#searchBar'),
+                $searchResult = $('#searchResult'),
+                $searchText = $('#searchText'),
+                $searchInput = $('#searchInput'),
+                $searchClear = $('#searchClear'),
+                $searchCancel = $('#searchCancel');
+
+            function hideSearchResult() {
+                $searchResult.hide();
+                $searchInput.val('');
+            }
+
+            function cancelSearch() {
+                hideSearchResult();
+                $searchBar.removeClass('webvUI-search-bar_focusing');
+                $searchText.show();
+            }
+
+            $searchText.on('click', function() {
+                $searchBar.addClass('webvUI-search-bar_focusing');
+                $searchInput.focus();
+            });
+            $searchInput
+                .on('blur', function() {
+                    if (!this.value.length) cancelSearch();
+                })
+                .on('input', function() {
+                    if (this.value.length) {
+                        $searchResult.show();
+                    } else {
+                        $searchResult.hide();
+                    }
+                });
+            $searchClear.on('click', function() {
+                hideSearchResult();
+                $searchInput.focus();
+            });
+            $searchCancel.on('click', function() {
+                cancelSearch();
+                $searchInput.blur();
+            });
+        });
+        </script>
+    </div>
+</body>
+
+</html>

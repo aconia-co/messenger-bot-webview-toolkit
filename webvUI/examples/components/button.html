@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page button js_show">
+            <div class="page__hd">
+                <h1 class="page__title">Button</h1>
+                <p class="page__desc">Button example below</p>
+            </div>
+            <div class="page__bd page__bd_spacing">
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_primary">Primary Button Normal</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_primary webvUI-btn_loading"><i class="webvUI-loading"></i>Primary Button Loading</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_disabled webvUI-btn_primary">Primary Button Disabled</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_default">Secondary Button Normal</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_default webvUI-btn_loading"><i class="webvUI-loading"></i>Secondary Button Loading</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_disabled webvUI-btn_default">Secondary Button Disabled</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_warn">Warning Button Normal</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_warn webvUI-btn_loading"><i class="webvUI-loading"></i>Warning Button Loading</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_disabled webvUI-btn_warn">Warning Button Disabled</a>
+                <div class="button-sp-area">
+                    <a href="javascript:;" class="webvUI-btn webvUI-btn_plain-default">Button</a>
+                    <a href="javascript:;" class="webvUI-btn webvUI-btn_plain-default webvUI-btn_plain-disabled">Button</a>
+                    <a href="javascript:;" class="webvUI-btn webvUI-btn_plain-primary">Button</a>
+                    <a href="javascript:;" class="webvUI-btn webvUI-btn_plain-primary webvUI-btn_plain-disabled">Button</a>
+                    <a href="javascript:;" class="webvUI-btn webvUI-btn_mini webvUI-btn_primary">Button</a>
+                    <a href="javascript:;" class="webvUI-btn webvUI-btn_mini webvUI-btn_default">Button</a>
+                    <a href="javascript:;" class="webvUI-btn webvUI-btn_mini webvUI-btn_warn">Button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

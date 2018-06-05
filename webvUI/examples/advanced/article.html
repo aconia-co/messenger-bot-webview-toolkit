@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+
+    <div class="webvUI-mainwv-body article">
+        <div class="page__bd">
+            <article class="webvUI-article">
+                <h1 style="font-weight: bolder;text-decoration: underline;">3 Things You Are Not Doing to Sell Messenger Bots</h1>
+                <section>
+                    <h2 class="title">What are the most convincing arguments</h2><br/>
+                    <section>
+                        <h3 style="font-weight: bold;font-style: italic;">1. Do as much research as you can on your potential client.</h3>
+                        <p>
+                            It’s no good waltzing in and doing your well rehearsed sales pitch if you don’t even have a basic understanding of their business sector; or worse, an understanding of their business in their business sector.<br/>
+                            It’s not one size fits all.<br/>
+                            <br/>[...]<br/>
+                        </p>
+                        <p>
+                            <img src="../../src/img/messenger_doc_webviews.png" alt="">
+                        </p>
+                    </section>
+                    <section>
+                        <h3 style="font-weight: bold;font-style: italic;">2. Talk less and listen more, much more.</h3>
+                        <p>
+                            Messengers bots are no doubt the next big thing when it comes to marketing, but having a one way conversation about how great they are, what they can do and you will quickly get a glazed look from your potential client.<br/>
+                            Your clients don’t care about the statistics, they couldn’t be more un-interested in it being the next big thing; all they want to know is what it can do for them. How can this messenger bot thing help their business and services? What’s the benefit to them? How will it make their lives easier, better and most important of all, bring in more money?<br/>
+                            <br/>[...]<br/>
+                        </p>
+                        <p>
+                            <img src="../../src/img/messenger_doc_webviews.png" alt="">
+                        </p>
+                    </section>
+                    <section>
+                        <a href="https://medium.com/aconia/3-things-you-are-not-doing-to-sell-messenger-bots-fc47efa779eb">[View full article]</a>
+                    </section>
+                </section>
+            </article>
+        </div>
+    </div>
+
+    <div class="webvUI-bottombtn">
+        <a href="javascript:;" class="webvUI-btn webvUI-btn_default" onclick="closeWebview()">⬅️ Back to Bot</a>
+    </div>
+
+    <script>
+    function closeWebview() {
+        MessengerExtensions.requestCloseBrowser(function success() {
+            // webview closed
+        }, function error(err) {
+            alert(err);
+        });
+    };
+    </script>
+    </div>
+</body>
+
+</html>

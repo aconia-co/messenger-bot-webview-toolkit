@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page slider js_show">
+            <div class="page__hd">
+                <h1 class="page__title">Slider</h1>
+                <p class="page__desc">Slide example below</p>
+            </div>
+            <div class="page__bd page__bd_spacing">
+                <div class="webvUI-cells__title">Minimun Range</div>
+                <div class="webvUI-slider-box">
+                    <div class="webvUI-slider2">
+                        <input type="range" min="18" max="100" value="20" class="webvUI-slider2" id="minRange">
+                    </div>
+                    <div id="minRangeValue" class="webvUI-slider-box__value webvUI-sliderValue">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">20</font>
+                        </font>
+                    </div>
+                </div>
+                <div class="webvUI-cells__title">Maximum Range</div>
+                <div class="webvUI-slider-box">
+                    <div class="webvUI-slider2">
+                        <input type="range" min="18" max="100" value="30" class="webvUI-slider2" id="maxRange">
+                    </div>
+                    <div id="maxRangeValue" class="webvUI-slider-box__value webvUI-sliderValue">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">30</font>
+                        </font>
+                    </div>
+                </div>
+                <div id="RangeWarning" style="visibility: hidden">
+                    <div class="webvUI-cells webvUI-cells_form">
+                        <div class="webvUI-cell webvUI-cell_warn">
+                            <div class="webvUI-cell__hd">MIN must be greater than or equal to MAX </div>
+                            <div class="webvUI-cell__ft">
+                                <i class="webvUI-icon-warn"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="webvUI-cells__title">Disabled Range</div>
+                <div class="webvUI-slider-box">
+                    <div class="webvUI-slider2">
+                        <input type="range" min="1" max="20" value="0" class="webvUI-slider2" id="lengthSlider" oninput="webvUISliderUpdate(this)" disabled>
+                    </div>
+                    <div id="lengthValue" class="webvUI-slider-box__value webvUI-sliderValue">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">0</font>
+                        </font>
+                    </div>
+                </div>
+                <div class="webvUI-cells__title">Range</div>
+                <div class="webvUI-slider-box">
+                    <div class="webvUI-slider2">
+                        <input type="range" min="1" max="20" value="12" class="webvUI-slider2" id="lengthSlider" oninput="webvUISliderUpdate(this)">
+                    </div>
+                    <div id="lengthValue" class="webvUI-slider-box__value webvUI-sliderValue">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">12</font>
+                        </font>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

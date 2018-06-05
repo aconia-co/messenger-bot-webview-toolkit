@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page preview js_show">
+            <div class="page__hd">
+                <h1 class="page__title">Preview</h1>
+                <p class="page__desc">Payment preview examples below</p>
+            </div>
+            <div class="page__bd">
+                <div class="webvUI-form-preview">
+                    <div class="webvUI-form-preview__hd">
+                        <div class="webvUI-form-preview__item">
+                            <label class="webvUI-form-preview__label">Payment Amount</label>
+                            <em class="webvUI-form-preview__value">¥2400.00</em>
+                        </div>
+                    </div>
+                    <div class="webvUI-form-preview__bd">
+                        <div class="webvUI-form-preview__item">
+                            <label class="webvUI-form-preview__label">Cart Id</label>
+                            <span class="webvUI-form-preview__value">0a1b2c3d4e5f</span>
+                        </div>
+                        <div class="webvUI-form-preview__item">
+                            <label class="webvUI-form-preview__label">User Info</label>
+                            <span class="webvUI-form-preview__value">Sample User Data</span>
+                        </div>
+                        <div class="webvUI-form-preview__item">
+                            <label class="webvUI-form-preview__label">Payment Info</label>
+                            <span class="webvUI-form-preview__value">Sample Payment Info 1 - Sample Payment Info 2</span>
+                        </div>
+                    </div>
+                    <div class="webvUI-form-preview__ft">
+                        <a class="webvUI-form-preview__btn webvUI-form-preview__btn_primary" href="javascript:">Validate</a>
+                    </div>
+                </div>
+                <br>
+                <div class="webvUI-form-preview">
+                    <div class="webvUI-form-preview__hd">
+                        <label class="webvUI-form-preview__label">Payment Amount</label>
+                        <em class="webvUI-form-preview__value">¥2400.00</em>
+                    </div>
+                    <div class="webvUI-form-preview__bd">
+                        <div class="webvUI-form-preview__item">
+                            <label class="webvUI-form-preview__label">Cart Id</label>
+                            <span class="webvUI-form-preview__value">0a1b2c3d4e5f</span>
+                        </div>
+                        <div class="webvUI-form-preview__item">
+                            <label class="webvUI-form-preview__label">User Info</label>
+                            <span class="webvUI-form-preview__value">Sample User Data</span>
+                        </div>
+                        <div class="webvUI-form-preview__item">
+                            <label class="webvUI-form-preview__label">Payment Info</label>
+                            <span class="webvUI-form-preview__value">Sample Payment Info 1 - Sample Payment Info 2</span>
+                        </div>
+                    </div>
+                    <div class="webvUI-form-preview__ft">
+                        <a class="webvUI-form-preview__btn webvUI-form-preview__btn_default" href="javascript:">Cancel</a>
+                        <button type="submit" class="webvUI-form-preview__btn webvUI-form-preview__btn_primary" href="javascript:">Validate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

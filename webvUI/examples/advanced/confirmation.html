@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+    <div class="page msg_success js_show">
+        <div class="webvUI-msg">
+            <div class="webvUI-msg__icon-area"><i class="webvUI-icon-success webvUI-icon_msg"></i></div>
+            <div class="webvUI-msg__text-area">
+                <h2 class="webvUI-msg__title">Successful operation</h2>
+                <p class="webvUI-msg__desc">
+                    Content details can be arranged according to actual needs, if the line break does not exceed the specified length, center display
+                    <a href="javascript:void(0);">
+                            
+                                text link
+                            
+                        </a>
+                </p>
+            </div>
+            <div class="webvUI-msg__opr-area">
+                <p class="webvUI-btn-area">
+                    <a href="javascript:;" class="webvUI-btn webvUI-btn_primary">
+                            
+                                Following Step 
+                            
+                        </a>
+                    <a href="javascript:;" class="webvUI-btn webvUI-btn_default" onclick="closeWebview();">
+                            
+                                Close
+                            
+                        </a>
+                </p>
+            </div>
+            <div class="webvUI-msg__extra-area">
+                <div class="webvUI-footer">
+                    <p class="webvUI-footer__links">
+                        <a href="javascript:void(0);" class="webvUI-footer__link">
+                                
+                                    Bottom link text
+                                
+                            </a>
+                    </p>
+                    <p class="webvUI-footer__text">
+                        Copyright © 2008-2016 webvUI.io
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    function closeWebview() {
+        MessengerExtensions.requestCloseBrowser(function success() {
+            // webview closed
+        }, function error(err) {
+            alert(err);
+        });
+    };
+    </script>
+    </div>
+</body>
+
+</html>

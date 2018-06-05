@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actionsheet Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page actionsheet js_show">
+            <div class="page__hd">
+                <h1 class="page__title">ActionSheet</h1>
+                <p class="page__desc">Popup Menu</p>
+            </div>
+            <div class="page__bd page__bd_spacing">
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_default" id="showIOSActionSheet">iOS ActionSheet</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_default" id="showAndroidActionSheet">Android ActionSheet</a>
+            </div>
+            <div>
+                <div class="webvUI-mask" id="iosMask" style="display: none"></div>
+                <div class="webvUI-actionsheet" id="iosActionsheet">
+                    <div class="webvUI-actionsheet__title">
+                        <p class="webvUI-actionsheet__title-text">Title text</p>
+                    </div>
+                    <div class="webvUI-actionsheet__menu">
+                        <div class="webvUI-actionsheet__cell">Example 1</div>
+                        <div class="webvUI-actionsheet__cell">Example 2</div>
+                        <div class="webvUI-actionsheet__cell">Example 3</div>
+                        <div class="webvUI-actionsheet__cell">Example 4</div>
+                    </div>
+                    <div class="webvUI-actionsheet__action">
+                        <div class="webvUI-actionsheet__cell" id="iosActionsheetCancel">Cancel</div>
+                    </div>
+                </div>
+            </div>
+            <div class="webvUI-skin_android" id="androidActionsheet" style="display: none">
+                <div class="webvUI-mask"></div>
+                <div class="webvUI-actionsheet">
+                    <div class="webvUI-actionsheet__menu">
+                        <div class="webvUI-actionsheet__cell">Example 1</div>
+                        <div class="webvUI-actionsheet__cell">Example 2</div>
+                        <div class="webvUI-actionsheet__cell">Example 3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" class="actionsheet js_show">
+        // ios
+        $(function() {
+            var $iosActionsheet = $('#iosActionsheet');
+            var $iosMask = $('#iosMask');
+
+            function hideActionSheet() {
+                $iosActionsheet.removeClass('webvUI-actionsheet_toggle');
+                $iosMask.fadeOut(200);
+            }
+
+            $iosMask.on('click', hideActionSheet);
+            $('#iosActionsheetCancel').on('click', hideActionSheet);
+            $("#showIOSActionSheet").on("click", function() {
+                $iosActionsheet.addClass('webvUI-actionsheet_toggle');
+                $iosMask.fadeIn(200);
+            });
+        });
+
+        // android
+        $(function() {
+            var $androidActionSheet = $('#androidActionsheet');
+            var $androidMask = $androidActionSheet.find('.webvUI-mask');
+
+            $("#showAndroidActionSheet").on('click', function() {
+                $androidActionSheet.fadeIn(200);
+                $androidMask.on('click', function() {
+                    $androidActionSheet.fadeOut(200);
+                });
+            });
+        });
+        </script>
+    </div>
+</body>
+
+</html>

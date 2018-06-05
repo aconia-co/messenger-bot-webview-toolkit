@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Edit</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+    <div class="preview webvUI-mainwv-body">
+        <div class="page__hd">
+            <h1 class="page__title">Edit Profile</h1>
+            <p class="page__desc">
+                Change profile status and preferences here
+            </p>
+        </div>
+        <div class="page__bd">
+            <div class="webvUI-cells__title">Update status</div>
+            <div class="webvUI-cells">
+                <div class="webvUI-cell">
+                    <div class="webvUI-cell__bd">
+                        <input class="webvUI-input" type="text" placeholder="" value="Hi there, how's everyone doing today?">
+                    </div>
+                </div>
+            </div>
+            <div class="webvUI-cells__title">Update bio</div>
+            <div class="webvUI-cells webvUI-cells_form">
+                <div class="webvUI-cell">
+                    <div class="webvUI-cell__bd">
+                        <textarea name="message" placeholder="Message" class="webvUI-textarea" rows="6" style="font-family: arial;font-size: 14px;">Hi ! I'm a singer, songwriter, producer, filmmaker or simply "an Independent Artist". Welcome to my youtube channel. A place where I post my original songs, covers and vlogs ! Get my original songs here!</textarea>
+                        <div class="webvUI-textarea-counter"><span>0</span> /200
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="webvUI-cells__title">Upload Profile Picture</div>
+            <div class="webvUI-cells webvUI-cells_form">
+                <div class="webvUI-cell">
+                    <div class="webvUI-cell__bd">
+                        <div class="webvUI-uploader">
+                            <div class="webvUI-uploader__hd">
+                                <p class="webvUI-uploader__title">
+                                    upload picture
+                                </p>
+                                <div class="webvUI-uploader__info">
+                                    0/2
+                                </div>
+                            </div>
+                            <div class="webvUI-uploader__bd" style="padding-top: 11px;">
+                                <ul class="webvUI-uploader__files" id="uploaderFiles">
+                                    <li class="webvUI-uploader__file webvUI-uploader__file_status" style="background-image:url(../../src/img/man_silhouette.jpg)" onclick="selectImg_TEMP(this)">
+                                        <div class="webvUI-uploader__file-content">
+                                            <i class="webvUI-icon-success"></i>
+                                        </div>
+                                        <div class="webvUI-imguploader-delete" onclick="removeImg_TEMP(this)">
+                                            <i class="webvUI-icon-cancel"></i>
+                                        </div>
+                                    </li>
+                                    <li class="webvUI-uploader__file webvUI-uploader__file_status webvUI-imguploader-unselected" style="background-image:url(../../src/img/woman_silhouette.jpg);" onclick="selectImg_TEMP(this)">
+                                        <div class="webvUI-uploader__file-content">
+                                            <i class="webvUI-icon-success"></i>
+                                        </div>
+                                        <div class="webvUI-imguploader-delete" onclick="removeImg_TEMP(this)">
+                                            <i class="webvUI-icon-cancel"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="webvUI-uploader__input-box">
+                                    <input id="uploaderInput" class="webvUI-uploader__input" type="file" accept="image/*" multiple="" onchange="fileUploaded(event)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="" id="blah" />
+            <div id="toast" style="opacity: 0; display: none;">
+                <div class="webvUI-mask_transparent"></div>
+                <div class="webvUI-toast">
+                    <i class="webvUI-icon-success-no-circle webvUI-icon_toast"></i>
+                    <p class="webvUI-toast__content">
+                        completed
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="webvUI-bottombtn">
+    <a href="javascript:;" class="webvUI-btn webvUI-btn_primary" onclick="closeWebview()">Save</a>
+  </div>
+
+
+  <script>
+
+  function closeWebview()
+  {
+    MessengerExtensions.requestCloseBrowser(function success() {
+      // webview closed
+    }, function error(err) {
+      alert(err);
+    });
+  };
+
+  /*-----------------*/
+
+  function fileUploaded(e) 
+  {
+    console.log("upload");
+    addNewImg_TEMP(e);
+  };
+
+  function addNewImg_TEMP(e)
+  {
+    var url = URL.createObjectURL(e.target.files[0]);
+    var template = "<li class=\"webvUI-uploader__file webvUI-uploader__file_status webvUI-imguploader-unselected\" style=\"background-image:url('" + url + "');\" onclick=\"selectImg_TEMP(this)\"><div class=\"webvUI-uploader__file-content\"><i class=\"webvUI-icon-success\"></i></div><div class=\"webvUI-imguploader-delete\" onclick=\"removeImg_TEMP(this)\"><i class=\"webvUI-icon-cancel\"></i></div></li>";
+    var ul = document.getElementById('uploaderFiles');
+    ul.insertAdjacentHTML('beforeend', template);
+  }
+
+  function removeImg_TEMP(e)
+  {
+    console.log("delete");
+    e.parentNode.parentNode.removeChild(e.parentNode);
+    event.stopPropagation();
+  }
+
+  function selectImg_TEMP(e)
+  {
+    console.log("select");
+    var elements = document.getElementsByClassName('webvUI-uploader__file_status');
+    for(var i = 0; i < elements.length; ++i)
+    {
+        elements[i].classList.add('webvUI-imguploader-unselected');
+    }
+    e.classList.remove('webvUI-imguploader-unselected');
+  }
+
+  </script>
+
+    </div>
+</body>
+
+</html>

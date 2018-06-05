@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page panel js_show">
+            <div class="page__hd">
+                <h1 class="page__title">Panel</h1>
+                <p class="page__desc">Panel examples below</p>
+            </div>
+            <div class="page__bd">
+                <div class="webvUI-panel webvUI-panel_access">
+                    <div class="webvUI-panel__hd">Graphic combination list</div>
+                    <div class="webvUI-panel__bd">
+                        <a href="javascript:void(0);" class="webvUI-media-box webvUI-media-box_appmsg">
+                            <div class="webvUI-media-box__hd">
+                                <img class="webvUI-media-box__thumb" src="../../src/img/flowers.jpg" alt="">
+                            </div>
+                            <div class="webvUI-media-box__bd">
+                                <h4 class="webvUI-media-box__title">Title 1</h4>
+                                <p class="webvUI-media-box__desc">Text description goes here, you can write up to 2 lines of text in this space...</p>
+                            </div>
+                        </a>
+                        <a href="javascript:void(0);" class="webvUI-media-box webvUI-media-box_appmsg">
+                            <div class="webvUI-media-box__hd">
+                                <img class="webvUI-media-box__thumb" src="../../src/img/flowers.jpg" alt="">
+                            </div>
+                            <div class="webvUI-media-box__bd">
+                                <h4 class="webvUI-media-box__title">Title 2</h4>
+                                <p class="webvUI-media-box__desc">Text description goes here, you can write up to 2 lines of text in this space...</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="webvUI-panel__ft">
+                        <a href="javascript:void(0);" class="webvUI-cell webvUI-cell_access webvUI-cell_link">
+                            <div class="webvUI-cell__bd">See more</div>
+                            <span class="webvUI-cell__ft"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="webvUI-panel webvUI-panel_access">
+                    <div class="webvUI-panel__hd">List of text combinations</div>
+                    <div class="webvUI-panel__bd">
+                        <div class="webvUI-media-box webvUI-media-box_text">
+                            <h4 class="webvUI-media-box__title">Title 1</h4>
+                            <p class="webvUI-media-box__desc">Text description goes here, you can write up to 2 lines of text in this space...</p>
+                        </div>
+                        <div class="webvUI-media-box webvUI-media-box_text">
+                            <h4 class="webvUI-media-box__title">Title 2</h4>
+                            <p class="webvUI-media-box__desc">Text description goes here, you can write up to 2 lines of text in this space...</p>
+                        </div>
+                    </div>
+                    <div class="webvUI-panel__ft">
+                        <a href="javascript:void(0);" class="webvUI-cell webvUI-cell_access webvUI-cell_link">
+                            <div class="webvUI-cell__bd">See more</div>
+                            <span class="webvUI-cell__ft"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="webvUI-panel">
+                    <div class="webvUI-panel__hd">Small graphic combination list</div>
+                    <div class="webvUI-panel__bd">
+                        <div class="webvUI-media-box webvUI-media-box_small-appmsg">
+                            <div class="webvUI-cells">
+                                <a class="webvUI-cell webvUI-cell_access" href="javascript:;">
+                                    <div class="webvUI-cell__hd"><img src="../../src/img/flowers.jpg" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                                    <div class="webvUI-cell__bd webvUI-cell_primary">
+                                        <p>Text Title </p>
+                                    </div>
+                                    <span class="webvUI-cell__ft"></span>
+                                </a>
+                                <a class="webvUI-cell webvUI-cell_access" href="javascript:;">
+                                    <div class="webvUI-cell__hd"><img src="../../src/img/flowers.jpg" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                                    <div class="webvUI-cell__bd webvUI-cell_primary">
+                                        <p>Text Title </p>
+                                    </div>
+                                    <span class="webvUI-cell__ft"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="webvUI-panel">
+                    <div class="webvUI-panel__hd">Text list with source</div>
+                    <div class="webvUI-panel__bd">
+                        <div class="webvUI-media-box webvUI-media-box_text">
+                            <h4 class="webvUI-media-box__title">Title 1</h4>
+                            <p class="webvUI-media-box__desc">Text description goes here, you can write up to 2 lines of text in this space...</p>
+                            <ul class="webvUI-media-box__info">
+                                <li class="webvUI-media-box__info__meta">Meta text 1</li>
+                                <li class="webvUI-media-box__info__meta">Meta text 2</li>
+                                <li class="webvUI-media-box__info__meta webvUI-media-box__info__meta_extra">Extra meta info</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

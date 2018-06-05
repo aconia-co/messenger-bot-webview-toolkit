@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page icons js_show">
+            <div class="page__hd">
+                <h1 class="page__title">Icons</h1>
+                <p class="page__desc">Icons example below</p>
+            </div>
+            <div class="page__bd page__bd_spacing">
+                <div class="icon-box">
+                    <i class="webvUI-icon-success webvUI-icon_msg"></i>
+                    <div class="icon-box__ctn">
+                        <h3 class="icon-box__title">Success</h3>
+                        <p class="icon-box__desc">Used to indicate successful operation</p>
+                    </div>
+                </div>
+                <div class="icon-box">
+                    <i class="webvUI-icon-info webvUI-icon_msg"></i>
+                    <div class="icon-box__ctn">
+                        <h3 class="icon-box__title">Information</h3>
+                        <p class="icon-box__desc">Used to indicate information prompts; also used for lack of conditional operation interception, prompting users for required information</p>
+                    </div>
+                </div>
+                <div class="icon-box">
+                    <i class="webvUI-icon-warn webvUI-icon_msg-primary"></i>
+                    <div class="icon-box__ctn">
+                        <h3 class="icon-box__title">Warning</h3>
+                        <p class="icon-box__desc">Used to indicate that the operation will cause certain consequences</p>
+                    </div>
+                </div>
+                <div class="icon-box">
+                    <i class="webvUI-icon-warn webvUI-icon_msg"></i>
+                    <div class="icon-box__ctn">
+                        <h3 class="icon-box__title">Danger</h3>
+                        <p class="icon-box__desc">Used to indicate that the operation will cause serious irreversible consequences</p>
+                    </div>
+                </div>
+                <div class="icon-box">
+                    <i class="webvUI-icon-waiting webvUI-icon_msg"></i>
+                    <div class="icon-box__ctn">
+                        <h3 class="icon-box__title">Wait</h3>
+                        <p class="icon-box__desc">Used to indicate that the operation will take time</p>
+                    </div>
+                </div>
+                <div class="icon_sp_area">
+                    <i class="webvUI-icon-success"></i>
+                    <i class="webvUI-icon-success-no-circle"></i>
+                    <i class="webvUI-icon-circle"></i>
+                    <i class="webvUI-icon-warn"></i>
+                    <i class="webvUI-icon-download"></i>
+                    <i class="webvUI-icon-info-circle"></i>
+                    <i class="webvUI-icon-cancel"></i>
+                    <i class="webvUI-icon-search"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

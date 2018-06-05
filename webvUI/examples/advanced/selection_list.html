@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection List</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+    <div class="webvUI-mainwv-body panel">
+        <div class="page__hd">
+            <h1 class="page__title">Selection List</h1>
+            <p class="page__desc">
+                Select one or more from the list of options below
+            </p>
+        </div>
+        <div class="page__bd">
+            <div class="webvUI-cells__title">Check list item</div>
+            <div class="webvUI-cells webvUI-cells_checkbox">
+                <label class="webvUI-cell webvUI-check__label" for="s11">
+                    <div class="webvUI-cell__hd">
+                        <input type="checkbox" class="webvUI-check" name="checkbox1" id="s11" checked="checked">
+                        <i class="webvUI-icon-checked"></i>
+                    </div>
+                    <div class="webvUI-cell__bd">
+                        <div class="webvUI-media-box webvUI-media-box_appmsg">
+                            <div class="webvUI-media-box__bd">
+                                <h4 class="webvUI-media-box__title">Item One</h4>
+                                <p class="webvUI-media-box__desc">Mother's day bouquet composed of red and pink roses</p>
+                            </div>
+                            <div class="webvUI-media-box__hd" style="margin-left: .8em;">
+                                <img class="webvUI-media-box__thumb" src="../../src/img/flowers.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <label class="webvUI-cell webvUI-check__label" for="s12">
+                    <div class="webvUI-cell__hd">
+                        <input type="checkbox" class="webvUI-check" name="checkbox1" id="s12">
+                        <i class="webvUI-icon-checked"></i>
+                    </div>
+                    <div class="webvUI-cell__bd">
+                        <div class="webvUI-media-box webvUI-media-box_appmsg">
+                            <div class="webvUI-media-box__bd">
+                                <h4 class="webvUI-media-box__title">Item Two</h4>
+                                <p class="webvUI-media-box__desc">Mother's day bouquet composed of red and pink roses</p>
+                            </div>
+                            <div class="webvUI-media-box__hd" style="margin-left: .8em;">
+                                <img class="webvUI-media-box__thumb" src="../../src/img/flowers.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <label class="webvUI-cell webvUI-check__label" for="s13">
+                    <div class="webvUI-cell__hd">
+                        <input type="checkbox" class="webvUI-check" name="checkbox1" id="s13">
+                        <i class="webvUI-icon-checked"></i>
+                    </div>
+                    <div class="webvUI-cell__bd">
+                        <div class="webvUI-media-box webvUI-media-box_appmsg">
+                            <div class="webvUI-media-box__bd">
+                                <h4 class="webvUI-media-box__title">Item Three</h4>
+                                <p class="webvUI-media-box__desc">Mother's day bouquet composed of red and pink roses</p>
+                            </div>
+                            <div class="webvUI-media-box__hd" style="margin-left: .8em;">
+                                <img class="webvUI-media-box__thumb" src="../../src/img/flowers.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <a href="javascript:void(0);" class="webvUI-cell webvUI-cell_link">
+                    <div class="webvUI-cell__bd">Add more</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="webvUI-bottombtn">
+        <a href="javascript:;" class="webvUI-btn webvUI-btn_primary" onclick="closeWebview()">Validate choice(s)</a>
+    </div>
+
+    <script>
+    function closeWebview() {
+        MessengerExtensions.requestCloseBrowser(function success() {
+            // webview closed
+        }, function error(err) {
+            alert(err);
+        });
+    };
+    </script>
+    </div>
+</body>
+
+</html>

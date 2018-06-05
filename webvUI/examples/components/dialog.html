@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page dialog js_show">
+            <div class="page__hd">
+                <h1 class="page__title">Dialog</h1>
+                <p class="page__desc">Dialog example below</p>
+            </div>
+            <div class="page__bd page__bd_spacing">
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_default" id="showIOSDialog1">iOS Dialog Style One</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_default" id="showIOSDialog2">iOS Dialog Style Two</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_default" id="showAndroidDialog1">Android Dialog Style One</a>
+                <a href="javascript:;" class="webvUI-btn webvUI-btn_default" id="showAndroidDialog2">Android Dialog Style Two</a>
+            </div>
+            <script type="text/javascript" class="dialog js_show">
+            $(function() {
+                var $iosDialog1 = $('#iosDialog1'),
+                    $iosDialog2 = $('#iosDialog2'),
+                    $androidDialog1 = $('#androidDialog1'),
+                    $androidDialog2 = $('#androidDialog2');
+
+                $('#dialogs').on('click', '.webvUI-dialog__btn', function() {
+                    $(this).parents('.js_dialog').fadeOut(200);
+                });
+
+                $('#showIOSDialog1').on('click', function() {
+                    $iosDialog1.fadeIn(200);
+                });
+                $('#showIOSDialog2').on('click', function() {
+                    $iosDialog2.fadeIn(200);
+                });
+                $('#showAndroidDialog1').on('click', function() {
+                    $androidDialog1.fadeIn(200);
+                });
+                $('#showAndroidDialog2').on('click', function() {
+                    $androidDialog2.fadeIn(200);
+                });
+            });
+            </script>
+            <div id="dialogs">
+                <div class="js_dialog" id="iosDialog1" style="display: none;">
+                    <div class="webvUI-mask"></div>
+                    <div class="webvUI-dialog">
+                        <div class="webvUI-dialog__hd"><strong class="webvUI-dialog__title">Popup Title</strong></div>
+                        <div class="webvUI-dialog__bd">Pop-up window content to inform the current status, information and solutions, description text as much as possible in three lines</div>
+                        <div class="webvUI-dialog__ft">
+                            <a href="javascript:;" class="webvUI-dialog__btn webvUI-dialog__btn_default">Cancel</a>
+                            <a href="javascript:;" class="webvUI-dialog__btn webvUI-dialog__btn_primary">Ok</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="js_dialog" id="iosDialog2" style="display: none;">
+                    <div class="webvUI-mask"></div>
+                    <div class="webvUI-dialog">
+                        <div class="webvUI-dialog__bd">Pop-up window content to inform the current status, information and solutions, description text as much as possible in three lines</div>
+                        <div class="webvUI-dialog__ft">
+                            <a href="javascript:;" class="webvUI-dialog__btn webvUI-dialog__btn_primary">Ok</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="js_dialog" id="androidDialog1" style="display: none;">
+                    <div class="webvUI-mask"></div>
+                    <div class="webvUI-dialog webvUI-skin_android">
+                        <div class="webvUI-dialog__hd"><strong class="webvUI-dialog__title">Popup Title</strong></div>
+                        <div class="webvUI-dialog__bd">
+                            Pop-up window content to inform the current status, information and solutions, description text as much as possible in three lines
+                        </div>
+                        <div class="webvUI-dialog__ft">
+                            <a href="javascript:;" class="webvUI-dialog__btn webvUI-dialog__btn_default">Cancel</a>
+                            <a href="javascript:;" class="webvUI-dialog__btn webvUI-dialog__btn_primary">Ok</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="js_dialog" id="androidDialog2" style="display: none;">
+                    <div class="webvUI-mask"></div>
+                    <div class="webvUI-dialog webvUI-skin_android">
+                        <div class="webvUI-dialog__bd">
+                            Pop-up window content to inform the current status, information and solutions, description text as much as possible in three lines
+                        </div>
+                        <div class="webvUI-dialog__ft">
+                            <a href="javascript:;" class="webvUI-dialog__btn webvUI-dialog__btn_default">Cancel</a>
+                            <a href="javascript:;" class="webvUI-dialog__btn webvUI-dialog__btn_primary">Ok</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

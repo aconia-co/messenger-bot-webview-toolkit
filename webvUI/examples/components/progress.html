@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page progress js_show">
+            <div class="page__hd">
+                <h1 class="page__title">Progress</h1>
+                <p class="page__desc">Progress bar examples below</p>
+            </div>
+            <div class="page__bd page__bd_spacing">
+                <div class="webvUI-progress">
+                    <div class="webvUI-progress__bar">
+                        <div class="webvUI-progress__inner-bar js_progress" style="width: 0%;"></div>
+                    </div>
+                    <a href="javascript:;" class="webvUI-progress__opr">
+                <i class="webvUI-icon-cancel"></i>
+            </a>
+                </div>
+                <br>
+                <div class="webvUI-progress">
+                    <div class="webvUI-progress__bar">
+                        <div class="webvUI-progress__inner-bar js_progress" style="width: 50%;"></div>
+                    </div>
+                    <a href="javascript:;" class="webvUI-progress__opr">
+                <i class="webvUI-icon-cancel"></i>
+            </a>
+                </div>
+                <br>
+                <div class="webvUI-progress">
+                    <div class="webvUI-progress__bar">
+                        <div class="webvUI-progress__inner-bar js_progress" style="width: 80%;"></div>
+                    </div>
+                    <a href="javascript:;" class="webvUI-progress__opr">
+                <i class="webvUI-icon-cancel"></i>
+            </a>
+                </div>
+                <div class="webvUI-btn-area">
+                    <a href="javascript:;" class="webvUI-btn webvUI-btn_primary" id="btnUpload">Upload</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

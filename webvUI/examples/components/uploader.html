@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploader</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page uploader js_show">
+            <div class="page__hd">
+                <h1 class="page__title">Uploader</h1>
+                <p class="page__desc">Uploader example below - can be used with the Gallery component</p>
+            </div>
+            <div class="page__bd">
+                <div class="webvUI-gallery" id="gallery">
+                    <span class="webvUI-gallery__img" id="galleryImg"></span>
+                    <div class="webvUI-gallery__opr">
+                        <a href="javascript:" class="webvUI-gallery__del">
+                    <i class="webvUI-icon-delete webvUI-icon_gallery-delete"></i>
+                </a>
+                    </div>
+                </div>
+                <div class="webvUI-cells webvUI-cells_form">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__bd">
+                            <div class="webvUI-uploader">
+                                <div class="webvUI-uploader__hd">
+                                    <p class="webvUI-uploader__title">Upload pictures</p>
+                                    <div class="webvUI-uploader__info">0/2</div>
+                                </div>
+                                <div class="webvUI-uploader__bd">
+                                    <ul class="webvUI-uploader__files" id="uploaderFiles">
+                                        <li class="webvUI-uploader__file" style="background-image:url(../../src/img/partner-4.png)"></li>
+                                        <li class="webvUI-uploader__file" style="background-image:url(../../src/img/partner-4.png)"></li>
+                                        <li class="webvUI-uploader__file" style="background-image:url(../../src/img/partner-4.png)"></li>
+                                        <li class="webvUI-uploader__file webvUI-uploader__file_status" style="background-image:url(../../src/img/partner-4.png)">
+                                            <div class="webvUI-uploader__file-content">
+                                                <i class="webvUI-icon-warn"></i>
+                                            </div>
+                                        </li>
+                                        <li class="webvUI-uploader__file webvUI-uploader__file_status" style="background-image:url(../../src/img/partner-4.png)">
+                                            <div class="webvUI-uploader__file-content">50%</div>
+                                        </li>
+                                    </ul>
+                                    <div class="webvUI-uploader__input-box">
+                                        <input id="uploaderInput" class="webvUI-uploader__input" type="file" accept="image/*" multiple="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" class="uploader js_show">
+        $(function() {
+            var tmpl = '<li class="webvUI-uploader__file" style="background-image:url(#url#)"></li>',
+                $gallery = $("#gallery"),
+                $galleryImg = $("#galleryImg"),
+                $uploaderInput = $("#uploaderInput"),
+                $uploaderFiles = $("#uploaderFiles");
+
+            $uploaderInput.on("change", function(e) {
+                var src, url = window.URL || window.webkitURL || window.mozURL,
+                    files = e.target.files;
+                for (var i = 0, len = files.length; i < len; ++i) {
+                    var file = files[i];
+
+                    if (url) {
+                        src = url.createObjectURL(file);
+                    } else {
+                        src = e.target.result;
+                    }
+
+                    $uploaderFiles.append($(tmpl.replace('#url#', src)));
+                }
+            });
+            $uploaderFiles.on("click", "li", function() {
+                $galleryImg.attr("style", this.getAttribute("style"));
+                $gallery.fadeIn(100);
+            });
+            $gallery.on("click", function() {
+                $gallery.fadeOut(100);
+            });
+        });
+        </script>
+    </div>
+</body>
+
+</html>

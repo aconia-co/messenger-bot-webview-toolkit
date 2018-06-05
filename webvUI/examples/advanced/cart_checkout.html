@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Checkout</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+
+    <div class="preview">
+        <div class="page__hd">
+            <h1 class="page__title">Cart Checkout</h1>
+            <p class="page__desc">
+                Review and validate payment
+            </p>
+        </div>
+        <div class="page__bd">
+            <div class="webvUI-form-preview">
+                <div class="webvUI-form-preview__hd">
+                    <label class="webvUI-form-preview__label">
+                        Payment amount
+                    </label>
+                    <em class="webvUI-form-preview__value">$2400.00</em>
+                </div>
+                <div class="webvUI-form-preview__bd">
+                    <div class="webvUI-form-preview__item">
+                        <label class="webvUI-form-preview__label">
+                            Order ID
+                        </label>
+                        <span class="webvUI-form-preview__value">Groceries-42a3b</span>
+                    </div>
+                    <div class="webvUI-form-preview__item">
+                        <label class="webvUI-form-preview__label">
+                            Name
+                        </label>
+                        <span class="webvUI-form-preview__value">John Smith</span>
+                    </div>
+                    <div class="webvUI-form-preview__item">
+                        <label class="webvUI-form-preview__label">
+                            Card Information
+                        </label>
+                        <span class="webvUI-form-preview__value">1234-5678-91011 06/18</span>
+                    </div>
+                    <div class="webvUI-form-preview__item">
+                        <label class="webvUI-form-preview__label">
+                            Billing Address
+                        </label>
+                        <span class="webvUI-form-preview__value">123 Asphodel Way,<br/> 10010 Elysium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="webvUI-bottombtn">
+        <a href="javascript:;" class="webvUI-btn webvUI-btn_primary" onclick="closeWebview()">Validate Payment</a>
+    </div>
+
+    <script>
+    function closeWebview() {
+        MessengerExtensions.requestCloseBrowser(function success() {
+            // webview closed
+        }, function error(err) {
+            alert(err);
+        });
+    };
+    </script>
+    </div>
+</body>
+
+</html>

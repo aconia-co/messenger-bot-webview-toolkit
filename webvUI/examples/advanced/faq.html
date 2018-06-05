@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+    <div class="webvUI-mainwv-body preview">
+        <div class="page__hd">
+            <h1 class="page__title">FAQ</h1>
+            <p class="page__desc">
+                Messenger Platform Technical Frequently Asked Questions
+            </p>
+        </div>
+        <div class="page__bd">
+            <div class="webvUI-panel webvUI-panel_access">
+                <div class="webvUI-panel__hd">
+                    Subject 1 : Webhooks
+                </div>
+                <div class="webvUI-panel__bd">
+                    <div class="webvUI-media-box webvUI-media-box_text">
+                        <h4 class="webvUI-media-box__title webvUI-noellipsis">Why am I not receiving a callback to my webhook?</h4>
+                        <p class="webvUI-media-box__desc webvUI-noellipsis">
+                            There are 2 steps to receiving callbacks. First, make sure your webhook is setup properly (https://developers.facebook.com/docs/messenger-platform/webhook-reference#setup). There is an indicator when webhooks are properly setup. [...]
+                        </p>
+                    </div>
+                    <div class="webvUI-media-box webvUI-media-box_text">
+                        <h4 class="webvUI-media-box__title webvUI-noellipsis">How do I verify that the webhook call is coming from Facebook for security reasons?</h4>
+                        <p class="webvUI-media-box__desc webvUI-noellipsis">
+                            Calls to the webhook contain a field in the header named X-Hub-Signature, which can be used to validate that the call came from Facebook. [...]
+                        </p>
+                    </div>
+                </div>
+                <div class="webvUI-panel__ft">
+                    <a href="https://developers.facebook.com/docs/messenger-platform/faq" class="webvUI-cell webvUI-cell_access webvUI-cell_link">
+                        <div class="webvUI-cell__bd">
+                            see more
+                        </div>
+                        <span class="webvUI-cell__ft"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="webvUI-panel webvUI-panel_access">
+                <div class="webvUI-panel__hd">
+                    Subject 2 : Entry points
+                </div>
+                <div class="webvUI-panel__bd">
+                    <div class="webvUI-media-box webvUI-media-box_text">
+                        <h4 class="webvUI-media-box__title webvUI-noellipsis">How do I link a plugin click or my user account to a thread?</h4>
+                        <p class="webvUI-media-box__desc webvUI-noellipsis">
+                            When using the “Send to Messenger” Plugin, the data-ref parameter can be used by you as a pass-through-parameter to send through any information regarding the context of the click. People may also discover your page through search in Messenger. In these cases, you won't have a pass-through-parameter. You can use the account linking feature to associate a thread to a user account on your site. [...]
+                        </p>
+                    </div>
+                    <div class="webvUI-media-box webvUI-media-box_text">
+                        <h4 class="webvUI-media-box__title webvUI-noellipsis">How come I can't see the "Send to Messenger" plugin?</h4>
+                        <p class="webvUI-media-box__desc webvUI-noellipsis">
+                            When an app is in development mode only admins, developers and testers of the app are able to view the plugin. After the app is reviewed and approved, you make the app available to the public in the App Review tab in the App Dashboard. [...]
+                        </p>
+                    </div>
+                </div>
+                <div class="webvUI-panel__ft">
+                    <a href="https://developers.facebook.com/docs/messenger-platform/faq" class="webvUI-cell webvUI-cell_access webvUI-cell_link">
+                        <div class="webvUI-cell__bd">
+                            see more
+                        </div>
+                        <span class="webvUI-cell__ft"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="webvUI-bottombtn">
+        <a href="javascript:;" class="webvUI-btn webvUI-btn_default" onclick="closeWebview()">⬅️ Back to Bot</a>
+    </div>
+
+    <script>
+    function closeWebview() {
+        MessengerExtensions.requestCloseBrowser(function success() {
+            // webview closed
+        }, function error(err) {
+            alert(err);
+        });
+    };
+    </script>
+    </div>
+</body>
+
+</html>

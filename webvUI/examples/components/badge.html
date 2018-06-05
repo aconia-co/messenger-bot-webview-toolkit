@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge Component</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+        <div class="page badge js_show">
+            <div class="page__hd">
+                <h1 class="page__title">Badge</h1>
+                <p class="page__desc">Badge example below</p>
+            </div>
+            <div class="page__bd">
+                <div class="webvUI-cells__title">After the new message prompt and summary information, unified on the right side of the list</div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell webvUI-cell_access">
+                        <div class="webvUI-cell__bd">Single-row list</div>
+                        <div class="webvUI-cell__ft" style="font-size: 0">
+                            <span style="vertical-align:middle; font-size: 17px;">details</span>
+                            <span class="webvUI-badge webvUI-badge_dot" style="margin-left: 5px;margin-right: 5px;"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="webvUI-cells__title">Unread red dot follows the subject information and is unified on the left side of the list</div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__hd" style="position: relative;margin-right: 10px;">
+                            <img src="../../src/img/man_silhouette.jpg" style="width: 50px;display: block">
+                            <span class="webvUI-badge" style="position: absolute;top: -.4em;right: -.4em;">8</span>
+                        </div>
+                        <div class="webvUI-cell__bd">
+                            <p>Contact Name</p>
+                            <p style="font-size: 13px;color: #888888;">System Information</p>
+                        </div>
+                    </div>
+                    <div class="webvUI-cell webvUI-cell_access">
+                        <div class="webvUI-cell__bd">
+                            <span style="vertical-align: middle">Single-row list</span>
+                            <span class="webvUI-badge" style="margin-left: 5px;">8</span>
+                        </div>
+                        <div class="webvUI-cell__ft"></div>
+                    </div>
+                    <div class="webvUI-cell webvUI-cell_access">
+                        <div class="webvUI-cell__bd">
+                            <span style="vertical-align: middle">Single-row list</span>
+                            <span class="webvUI-badge" style="margin-left: 5px;">8</span>
+                        </div>
+                        <div class="webvUI-cell__ft">details</div>
+                    </div>
+                    <div class="webvUI-cell webvUI-cell_access">
+                        <div class="webvUI-cell__bd">
+                            <span style="vertical-align: middle">Single-row list</span>
+                            <span class="webvUI-badge" style="margin-left: 5px;">New</span>
+                        </div>
+                        <div class="webvUI-cell__ft"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

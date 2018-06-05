@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+    <div class="webvUI-mainwv-body panel">
+        <div class="page__hd">
+            <h1 class="page__title">Leaderboard</h1>
+            <p class="page__desc">
+                View leaderboard and scores
+            </p>
+        </div>
+        <div class="page__bd">
+            <div class="webvUI-panel webvUI-panel_access">
+                <div class="webvUI-panel__bd">
+                    <a href="javascript:void(0);" class="webvUI-media-box webvUI-media-box_appmsg">
+                        <div class="webvUI-media-box__hd">
+                            <img class="webvUI-media-box__thumb" src="../../src/img/avatar-round-1.png" alt="">
+                        </div>
+                        <div class="webvUI-media-box__bd">
+                            <h4 class="webvUI-media-box__title">1</h4>
+                            <p class="webvUI-media-box__desc">
+                                Jane Doe
+                            </p>
+                        </div>
+                        <span class=""><img style="height:40px;width:40px" src="../../src/img/1_medal.svg" alt=""></span>
+                    </a>
+                    <a href="javascript:void(0);" class="webvUI-media-box webvUI-media-box_appmsg">
+                        <div class="webvUI-media-box__hd">
+                            <img class="webvUI-media-box__thumb" src="../../src/img/avatar-round-2.png" alt="">
+                        </div>
+                        <div class="webvUI-media-box__bd">
+                            <h4 class="webvUI-media-box__title">2</h4>
+                            <p class="webvUI-media-box__desc">
+                                Helen Smith
+                            </p>
+                        </div>
+                        <span class=""><img style="height:40px;width:40px" src="../../src/img/2_medal.svg" alt=""></span>
+                    </a>
+                    <a href="javascript:void(0);" class="webvUI-media-box webvUI-media-box_appmsg">
+                        <div class="webvUI-media-box__hd">
+                            <img class="webvUI-media-box__thumb" src="../../src/img/avatar-round-3.png" alt="">
+                        </div>
+                        <div class="webvUI-media-box__bd">
+                            <h4 class="webvUI-media-box__title">3</h4>
+                            <p class="webvUI-media-box__desc">
+                                James Williams
+                            </p>
+                        </div>
+                        <span class=""><img style="height:40px;width:40px" src="../../src/img/3_medal.svg" alt=""></span>
+                    </a>
+                    <a href="javascript:void(0);" class="webvUI-media-box webvUI-media-box_appmsg">
+                        <div class="webvUI-media-box__hd">
+                            <img class="webvUI-media-box__thumb" src="../../src/img/avatar-round-4.png" alt="">
+                        </div>
+                        <div class="webvUI-media-box__bd">
+                            <h4 class="webvUI-media-box__title">4</h4>
+                            <p class="webvUI-media-box__desc">
+                                John Johnson
+                            </p>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="webvUI-media-box webvUI-media-box_appmsg">
+                        <div class="webvUI-media-box__hd">
+                            <img class="webvUI-media-box__thumb" src="../../src/img/man_silhouette.jpg" alt="">
+                        </div>
+                        <div class="webvUI-media-box__bd">
+                            <h4 class="webvUI-media-box__title">5</h4>
+                            <p class="webvUI-media-box__desc">
+                                Paul Brown
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="webvUI-bottombtn">
+        <a href="javascript:;" class="webvUI-btn webvUI-btn_default" onclick="closeWebview()">⬅️ Back to Bot</a>
+    </div>
+
+    <script>
+    function closeWebview() {
+        MessengerExtensions.requestCloseBrowser(function success() {
+            // webview closed
+        }, function error(err) {
+            alert(err);
+        });
+    };
+    </script>
+    </div>
+</body>
+
+</html>

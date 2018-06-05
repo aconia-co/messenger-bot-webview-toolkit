@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Object</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+    <div class="panel">
+        <div class="page__bd">
+            <div class="webvUI-panel webvUI-panel_access">
+                <div class="webvUI-panel__hd">
+                    Gift Idea
+                </div>
+                <div class="webvUI-detailedobj webvUI-panel__bd">
+                    <a href="javascript:void(0);" class="webvUI-media-box webvUI-media-box_appmsg">
+                        <div class="webvUI-media-box__hd">
+                            <img class="webvUI-media-box__thumb" src="../../src/img/flowers.jpg" alt="">
+                        </div>
+                        <div class="webvUI-media-box__bd">
+                            <h4 class="webvUI-media-box__title">Mother's day bouquet</h4>
+                            <p class="webvUI-media-box__desc">
+                                Mother's Day is a celebration honoring the mother of the family, as well as motherhood, maternal bonds, and the influence of mothers in society. It is celebrated on various days in many parts of the world, most commonly in the months of March or May. It complements similar celebrations honoring family members, such as Father's Day, Siblings Day, and Grandparents Day.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="webvUI-panel__ft">
+                    <a href="javascript:void(0);" class="webvUI-cell webvUI-cell_access webvUI-cell_link">
+                        <div class="webvUI-cell__bd">
+                            see more
+                        </div>
+                        <span class="webvUI-cell__ft"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="webvUI-bottombtn">
+        <a href="javascript:;" class="webvUI-btn webvUI-btn_primary" onclick="closeWebview()">Choose this gift</a>
+    </div>
+
+    <script>
+    function closeWebview() {
+        MessengerExtensions.requestCloseBrowser(function success() {
+            // webview closed
+        }, function error(err) {
+            alert(err);
+        });
+    };
+    </script>
+    </div>
+</body>
+
+</html>

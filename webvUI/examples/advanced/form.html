@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/webvUI.min.css">
+    <link rel="stylesheet" href="../../src/webvUI-menu.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI.min.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-menu.js"></script>
+    <script type="text/javascript" src="../../src/webvUI-slider.js"></script>
+    <script type="text/javascript">
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.com/en_US/messenger.Extensions.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'Messenger'));
+    </script>
+</head>
+
+<body style="background-color:#fafafa;">
+    <div class="main-container">
+    <div class="container" id="container">
+        <div class="page input js_show">
+            <div class="page__hd">
+                <h1 class="page__title">Input</h1>
+                <p class="page__desc">
+                    Form input
+                </p>
+            </div>
+            <div class="page__bd">
+                <div class="webvUI-cells__title">
+                    Single list item
+                </div>
+                <div class="webvUI-cells webvUI-cells_radio">
+                    <label class="webvUI-cell webvUI-check__label" for="x11">
+                        <div class="webvUI-cell__bd">
+                            <p>
+                                Cell standard
+                            </p>
+                        </div>
+                        <div class="webvUI-cell__ft">
+                            <input type="radio" class="webvUI-check" name="radio1" id="x11">
+                            <span class="webvUI-icon-checked"></span>
+                        </div>
+                    </label>
+                    <label class="webvUI-cell webvUI-check__label" for="x12">
+                        <div class="webvUI-cell__bd">
+                            <p>
+                                Cell standard
+                            </p>
+                        </div>
+                        <div class="webvUI-cell__ft">
+                            <input type="radio" name="radio1" class="webvUI-check" id="x12" checked="checked">
+                            <span class="webvUI-icon-checked"></span>
+                        </div>
+                    </label>
+                    <a href="javascript:void(0);" class="webvUI-cell webvUI-cell_link">
+                        <div class="webvUI-cell__bd">
+                            Add more
+                        </div>
+                    </a>
+                </div>
+                <div class="webvUI-cells__title">
+                    Check list item
+                </div>
+                <div class="webvUI-cells webvUI-cells_checkbox">
+                    <label class="webvUI-cell webvUI-check__label" for="s11">
+                        <div class="webvUI-cell__hd">
+                            <input type="checkbox" class="webvUI-check" name="checkbox1" id="s11" checked="checked">
+                            <i class="webvUI-icon-checked"></i>
+                        </div>
+                        <div class="webvUI-cell__bd">
+                            <p>
+                                Standard is dealt for u.
+                            </p>
+                        </div>
+                    </label>
+                    <label class="webvUI-cell webvUI-check__label" for="s12">
+                        <div class="webvUI-cell__hd">
+                            <input type="checkbox" name="checkbox1" class="webvUI-check" id="s12">
+                            <i class="webvUI-icon-checked"></i>
+                        </div>
+                        <div class="webvUI-cell__bd">
+                            <p>
+                                Standard is dealicient for u.
+                            </p>
+                        </div>
+                    </label>
+                    <a href="javascript:void(0);" class="webvUI-cell webvUI-cell_link">
+                        <div class="webvUI-cell__bd">
+                            Add more
+                        </div>
+                    </a>
+                </div>
+                <div class="webvUI-cells__title">
+                    Forms
+                </div>
+                <div class="webvUI-cells webvUI-cells_form">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__hd">
+                            <label class="webvUI-label">
+                                Qq
+                            </label>
+                        </div>
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="number" pattern="[0-9]*" placeholder="placeholder">
+                        </div>
+                    </div>
+                    <div class="webvUI-cell webvUI-cell_vcode">
+                        <div class="webvUI-cell__hd">
+                            <label class="webvUI-label">
+                                phone number
+                            </label>
+                        </div>
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="tel" placeholder="placeholder">
+                        </div>
+                        <div class="webvUI-cell__ft">
+                            <button class="webvUI-vcode-btn">
+                                get verification code
+                            </button>
+                        </div>
+                    </div>
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__hd">
+                            <label for="" class="webvUI-label">
+                                date
+                            </label>
+                        </div>
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="date" value="">
+                        </div>
+                    </div>
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__hd">
+                            <label for="" class="webvUI-label">
+                                time
+                            </label>
+                        </div>
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="datetime-local" value="" placeholder="placeholder">
+                        </div>
+                    </div>
+                    <div class="webvUI-cell webvUI-cell_vcode">
+                        <div class="webvUI-cell__hd">
+                            <label class="webvUI-label">
+                                Verification code
+                            </label>
+                        </div>
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="number" placeholder="placeholder">
+                        </div>
+                        <div class="webvUI-cell__ft">
+                            <img class="webvUI-vcode-img" src="../../src/img/vcode.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="webvUI-cells__tips">
+                    Bottom description text Bottom description text
+                </div>
+                <div class="webvUI-cells__title">
+                    Form error
+                </div>
+                <div class="webvUI-cells webvUI-cells_form">
+                    <div class="webvUI-cell webvUI-cell_warn">
+                        <div class="webvUI-cell__hd">
+                            <label for="" class="webvUI-label">
+                                card number
+                            </label>
+                        </div>
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="number" pattern="[0-9]*" value="webvUI input error" placeholder="placeholder">
+                        </div>
+                        <div class="webvUI-cell__ft">
+                            <i class="webvUI-icon-warn"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="webvUI-cells__title">
+                    switch
+                </div>
+                <div class="webvUI-cells webvUI-cells_form">
+                    <div class="webvUI-cell webvUI-cell_switch">
+                        <div class="webvUI-cell__bd">
+                            Headline text
+                        </div>
+                        <div class="webvUI-cell__ft">
+                            <input class="webvUI-switch" type="checkbox">
+                        </div>
+                    </div>
+                    <div class="webvUI-cell webvUI-cell_switch">
+                        <div class="webvUI-cell__bd">
+                            Compatible with the IE Edge version
+                        </div>
+                        <div class="webvUI-cell__ft">
+                            <label for="switchCP" class="webvUI-switch-cp">
+                                <input id="switchCP" class="webvUI-switch-cp__input" type="checkbox" checked="checked">
+                                <div class="webvUI-switch-cp__box"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="webvUI-cells__title">
+                    Text box
+                </div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="text" placeholder="placeholder">
+                        </div>
+                    </div>
+                </div>
+                <div class="webvUI-cells__title">
+                    Text field
+                </div>
+                <div class="webvUI-cells webvUI-cells_form">
+                    <div class="webvUI-cell">
+                        <div class="webvUI-cell__bd">
+                            <textarea class="webvUI-textarea" placeholder="placeholder" rows="3"></textarea>
+                            <div class="webvUI-textarea-counter"><span>0</span> / 200
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="webvUI-cells__title">
+                    select
+                </div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell webvUI-cell_select webvUI-cell_select-before">
+                        <div class="webvUI-cell__hd">
+                            <select class="webvUI-select" name="select2">
+                                <option value="1">
+                                    +86
+                                </option>
+                                <option value="2">
+                                    +80
+                                </option>
+                                <option value="3">
+                                    +84
+                                </option>
+                                <option value="4">
+                                    +87
+                                </option>
+                            </select>
+                        </div>
+                        <div class="webvUI-cell__bd">
+                            <input class="webvUI-input" type="number" pattern="[0-9]*" placeholder="placeholder">
+                        </div>
+                    </div>
+                </div>
+                <div class="webvUI-cells__title">
+                    select
+                </div>
+                <div class="webvUI-cells">
+                    <div class="webvUI-cell webvUI-cell_select">
+                        <div class="webvUI-cell__bd">
+                            <select class="webvUI-select" name="select1">
+                                <option selected="" value="1">
+                                    We chat number
+                                </option>
+                                <option value="2">
+                                    QQ number
+                                </option>
+                                <option value="3">
+                                    Email
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="webvUI-cell webvUI-cell_select webvUI-cell_select-after">
+                        <div class="webvUI-cell__hd">
+                            <label for="" class="webvUI-label">
+                                country / region
+                            </label>
+                        </div>
+                        <div class="webvUI-cell__bd">
+                            <select class="webvUI-select" name="select2">
+                                <option value="1">
+                                    China
+                                </option>
+                                <option value="2">
+                                    United States
+                                </option>
+                                <option value="3">
+                                    United Kingdom
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <label for="webvUIAgree" class="webvUI-agree">
+                    <input id="webvUIAgree" type="checkbox" class="webvUI-agree__checkbox">
+                    <span class="webvUI-agree__text">
+                    Read and agree to the <a href="javascript:void(0);">"Related Terms"</a>
+                </span>
+                </label>
+                <div class="webvUI-btn-area">
+                    <a class="webvUI-btn webvUI-btn_primary" href="javascript:" id="showTooltips" onclick="closeWebview();">
+                        
+                            Validate
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    function closeWebview() {
+        MessengerExtensions.requestCloseBrowser(function success() {
+            // webview closed
+        }, function error(err) {
+            alert(err);
+        });
+    };
+    </script>
+    </div>
+</body>
+
+</html>
